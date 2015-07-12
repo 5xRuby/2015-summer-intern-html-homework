@@ -1,0 +1,726 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<title>0714切版練習</title>
+	<link rel="stylesheet" href="">
+	<style>
+	*{
+		list-style:none;
+		text-decoration:none;
+		margin:0;
+		padding:0;
+	}
+	.clearfix{
+		clear:both;
+	}
+	p,h1,h2,h3,h4,h5,h6,a,div{
+		font-family:"微軟正黑體";
+	}
+	nav{
+		position:fixed;
+		width:1200px;
+		height:40px;
+		top:0;
+		left:50%;
+		margin-left:-600px;
+	}
+	nav a{
+		float:left;
+		display: block;
+		width:240px;
+		height:40px;
+		box-sizing:border-box;
+		border-left:1px solid #777;
+		background-color:#A1A194;
+		color:#fff;
+		text-align:center;
+	}
+	nav a:hover{
+		background-color:#949489;
+	}
+	nav li:first-child a:hover{
+		background-color:#99C038;
+	}
+	nav li:first-child a{  
+		border-left:0px;
+		background-color:#99C038;
+	}
+	div{
+		box-sizing: border-box;
+	}
+	.titlepage,.hellopage,.buildyourownpage{
+		height:600px;
+	}
+	.titlepage{
+		background-color:#9d4;
+		padding:200px 0 300px 0;
+	}
+	.logo{
+		width:450px;
+		margin:auto;
+	}
+	.slider{
+		width:1200px;
+		padding:100px 0 100px 0;
+		font-size:60px;
+		text-align:center;
+		color:#FFF;
+		background-color:#464646;
+		position:relative;
+		left:50%;
+		margin-top:-500px;
+		margin-left:-600px;
+
+	}
+	.hellopage{
+		padding:300px 0 200px 0;
+		background-color:#ddd;
+	}
+	.hello-col{
+		width:1200px;
+		margin:auto;
+	}
+	.leftside{
+		float:left;
+		width:800px;
+		padding:40px;
+	}
+	.leftside h1{
+		font-size:75px;
+		color:#99C038;
+	}
+	.leftside p{
+		font-size:40px;
+		color:#C5C4C4;
+	}
+	.hirecircle{
+		float:left;
+		width:200px;
+		height:200px;
+		margin:100px;
+		background-color:#99C038;
+		border-radius:100%;
+		padding:40px;
+		transition: 0.5s;
+	}
+	.hirecircle:hover,.moreinfocircle:hover,.moreinfo2:hover,.doc:hover,.subscribe:hover{
+		background-color:#464646;
+	}
+	.hirecircle p{
+		font-size: 50px;
+		color:#FFF;
+		text-align:center;
+	}
+	.planpage{
+		height:700px;
+
+	}
+	.plan-col{
+		width:1200px;
+		margin:auto;
+	}
+	.plan{
+		float:left;
+		width:250px;
+		margin:0 25px 0 25px;
+	}
+	.plancircle{
+		position:relative;
+		top:80px;
+		margin-left:37.5px;
+	}
+	.plancircle img{
+		border-radius:100%;
+	}
+	.plan1{
+		background-color:#A1A194;
+		height:220px;
+		padding-top:100px;
+		text-align: center;
+		color:#FFF;
+		font-size: 25px;
+	}
+	.plan2{
+		background-color:#F0F1F1;
+		height:180px;
+		padding:40px;
+		color:#A1A194;
+	}
+	.moreinfo:hover{
+		background-color:#F0F1F1;
+	}
+	#plan1-2,#info-2{
+		background-color:#737877;
+	}	
+	#plan1-3,#info-3{
+		background-color:#464646;
+	}	
+	#plan1-4,#info-4{
+		background-color:#99C038;
+	}
+	.moreinfo{
+		position:relative;
+		background-color:#A1A194;
+		width: 150px;
+		height:60px;
+		padding:20px;
+		font-size:16px;
+		color:#FFF;
+		top:100%;
+		text-align:center;
+	}	
+	.moreinfo:hover,#info-2:hover,#info-3:hover,#info-4:hover{
+		background-color:#F0F1F1;
+		color:#A1A194;
+	}
+	.buildyourownpage{
+		padding:100px 300px 200px 300px;
+		background-color:#ddd;
+		text-align:center;
+	}
+	.buildyourownpage h1{
+		font-size:;
+		color:#464646;
+	}
+	.buildyourownpage h1:nth-child(2){
+		color:#A3C64E;
+	}
+	.buildyourownpage h2{
+		color:#535353;
+		margin: 20px 0 20px 0;
+		font-size: 18px;
+	}
+	.buildyourownpage p{
+		font-size: 16px;
+		color:#C2C1C1;
+		padding:10px 0 30px 0;
+	}
+	.moreinfocircle{
+		background-color:#A3C64E;
+		width: 100px;
+		height: 100px;
+		border-radius:100%;
+		position:relative;
+		left:50%;
+		margin-left:-50px;
+		padding: 20px;
+		transition: 0.5s;
+	}
+	.moreinfocircle p{
+		color:#FFF;
+	}
+	.uspage{
+		height: 500px;
+		width: 1250px;
+		padding-top:50px;
+		margin:auto;
+	}
+	.gettoknow{
+		float:left;
+		width:800px;
+
+	}
+	.gettoknow h1{
+		color:#464646;
+	}
+	.gettoknow h1:nth-child(2){
+		margin-bottom: 20px;
+	}
+	.whychoose{
+		float:left;
+		width: 400px;
+		margin-left:50px;
+	}
+	.personpic{
+		width:200px;
+		float:left;
+	}
+	.uswords{
+		width:600px;
+		float:left;
+	}
+	.uswords h3,.whychoose h3{
+		color:#464646;
+	}
+	.uswords h3:first-child{
+		color:#99C038;
+	} 
+	.gettoknow p,.whychoose p{
+		color:#C2C1C1;
+		font-size: 14px;
+		line-height: 180%;
+		margin: 10px 0 10px 0;
+	}
+	.whychoose h1{
+		color:#99C038;
+	}
+	.whychoose h1:nth-child(2){
+		margin-bottom: 20px;
+	}
+	.moreinfo2{
+		background-color:#99C038;
+		width: 150px;
+		height:60px;
+		padding:10px;
+		text-align:center;
+		font-size:16px;
+	}
+	.moreinfo2 p{
+		color:#FFF;
+	}
+	.howitworkspage{
+		height:450px;
+		background-color:#580;
+		padding:120px;
+	}
+	.how-col{
+		width: 1200px;
+		margin:auto;
+	}
+	.leftside2{
+		float:left;
+		width:800px;
+	}
+	.doc{
+		float:left;
+		margin-left:200px;
+		width:150px;
+		height: 150px;
+		background-color:#99C038;
+		border-radius:100%;
+		padding:45px;
+		transition: 0.5s;
+	}
+	.doc img{
+		width: 100%;
+		height: 100%;
+	}
+	.leftside2 h1{
+		font-size: 70px;
+		color:#FFF;
+	}
+	.leftside2 p{
+		font-size: 20px;
+		color:#FFF;
+	}
+	.contactpage{
+		background-color:#174157;
+		height: 700px;
+		padding:200px;
+	}
+	.word-col{
+		width:600px;
+		margin:auto;
+	}
+	.word-col img{
+		width:80px;
+		height:80px;
+		float:left;
+	}
+	.word-col p{
+		width:500px;
+		margin-left:20px;
+		margin-top:20px;
+		float:left;
+		color:#FFF;
+		font-size: 20px;
+	}
+	.mail-col{
+		width: 600px;
+		margin:auto;
+		margin-top:20px;
+	}
+	.textform{
+		width:250px;
+		height: 50px;
+		margin-left:50px;
+	}
+	.subscribe{
+		width:200px;
+		height: 52px;
+		padding:0;
+		margin-left:20px;
+		background-color:#99C038;
+		color:#FFF;
+		font-size:20px;
+		border:0;
+		transition: 0.5s;
+	}
+	.foot-col{
+		width: 1200px;
+		margin:auto;
+		padding-top:200px;
+	}
+	.logo2{
+		float:left;
+	}
+	.foot-col p{
+		float:left;
+		margin-top:20px;
+		font-size: 14px;
+		color:#C2C1C1;
+	}	
+	.contactus{
+		position:fixed;
+		bottom: -10px;
+  		right: 20px;
+  		background-color:#5BA0D0;
+  		width:250px;
+  		height: 40px;
+  		border-radius:5px;
+  		padding:5px;
+	}
+	.contactus p{
+		color:#FFF;
+	}
+	.contactus p:hover{
+		text-decoration: underline;
+	}
+	.up{
+		position:fixed;
+		bottom: 60px;
+  		right: 20px;
+  		background-color:#99C038;
+  		width:60px;
+  		height: 60px;
+  		font-size: 30px;
+  		text-align:center;
+  		transition: 0.5s;
+	}
+	.up:hover{
+		background-color:#737877;
+	}
+	.up p{
+  		font-size: 60px;
+		color:#FFF;
+	}
+	.contact-col{
+		float:left;
+		width:160px;
+		height: 30px;
+		position:relative;
+		right:-600px;
+	}
+	.contact{
+		border-radius:100%;
+		background-color:#737877;
+		width: 30px;
+		height: 30px;
+		margin:5px;
+		float: left;
+		transition: 0.5s;
+	}
+	.contact:hover{
+		background-color:#99C038;
+	}
+
+	@media (max-width: 767px){  /*手機 */
+		/*.plan{
+			float:none;
+			width:100%;
+			left:0;
+		}*/
+		nav{
+			display:none;
+		}
+		.hellopage,.hello-col,.leftside,.planpage,.plan-col,.buildyourownpage,.uspage,.gettoknow,.uswords,.whychoose,.howitworkspage,.how-col,.contactpage,.leftside2,.word-col,.mail-col,.foot-col{
+			width:100%;
+			height: 100%;
+		}
+		.leftside,.hirecircle,.plan,.gettoknow,.uswords,.leftside2,.doc,.logo2,.foot-col p{
+			float:none;
+			margin:auto;
+		}
+		.logo{
+			width:80%;
+		}
+		.logo img{
+			width: 100%;
+			height:100%;
+		}
+		.personpic{
+			float:none;
+		}
+		.hello-col{
+			text-align:center;
+		}
+		.slider{
+			width:100%;
+			left:0;
+			margin-left:0;
+		}
+		.leftside p{
+		font-size:1.6em;
+		}
+		.plan{
+			width: 80%;
+			margin:10% auto 10% auto;
+		}
+		.plancircle{
+			width:45%;
+			height: 45%;
+			position: static;
+			margin:auto;
+			margin-bottom:-80px;
+		}
+		.plancircle img{
+			width: 100%;
+			height: 100%;
+		}
+		.moreinfo{
+			position:static;
+			margin:auto;
+			width:40%;
+		}
+		.buildyourownpage,.uspage{
+			padding:10%;
+		}
+		.whychoose{
+			margin-left:0;
+			margin-bottom:10%;
+		}
+		.howitworkspage{
+			padding:10%;
+			text-align: left;
+		}
+		.howitworkspage h1{
+			font-size:3em;
+		}
+		.howitworkspage p{
+			font-size:1em;
+		}
+		.doc{
+			margin-top: 10%;
+		}
+		.word-col,.mail-col,.foot-col{
+			padding:5%;
+			width:100%;
+		}
+		.contactpage{
+			padding:0;
+		}
+		.word-col img{
+			width:12.5%;
+			height:20%;
+			margin-top: 3%;
+		}
+		.word-col p{
+			width:80%;
+			height: 100%;
+		}
+		.textform,.subscribe{
+			float:none;
+			margin-left: 5%;
+		}
+		.logo2,.foot-col p{
+			width: 100%;
+			text-align: center;
+		}
+		.contact-col{
+			position:static;
+			float:none;
+			margin:5% auto 15% auto;
+		}
+		.contact{
+			margin:2.5%;
+		}
+		.up{
+			display: none;
+		}
+	}
+	
+
+
+	</style>
+</head>
+<body>
+	<div class="titlepage">
+		<div class="logo">
+			<img src="http://livedemo00.template-help.com/wordpress_53590/wp-content/themes/theme53590/images/logo.png" alt="logo">
+		</div>
+	</div>
+	<div class="hellopage">
+		<div class="slider">
+			<p>ORIGINAL HOT CREATIVE PROJECTS</p>
+		</div>
+		<div class="hello-col">
+			<div class="leftside">
+				<h1>HELLO THERE!</h1>
+				<p>WELCOME TO THE TOP RATED EXTERIOR DESIGN BUREAU WITH A TEAM OF REAL EXPERTS IN BUILDING EXCLUSIVE MODERN SPACES.</p>	
+			</div>
+			<div class="hirecircle">
+				<p>HIRE US!</p>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="planpage">
+		<div class="plan-col">
+			<div class="plan">
+				<div class="plancircle">
+					<img src="http://livedemo00.template-help.com/wordpress_53590/wp-content/uploads/2015/03/banner-img1.jpg" alt="a woman">
+				</div>
+				<div class="plan1">
+					<h3>MASTER</h3>
+					<h3>PLANS</h3>
+				</div>
+				<div class="plan2"><p>Mes cuml dia sed in lacus ut dol eniasc etor ingerto aliiqt es sitet amet eism ictor ut ligulate ameti. dapibus.</p></div>
+				<div class="moreinfo">
+					<p>MORE INFO</p>
+				</div>
+			</div>
+			<div class="plan">
+				<div class="plancircle">
+					<img src="http://livedemo00.template-help.com/wordpress_53590/wp-content/uploads/2015/03/banner-img2.jpg" alt="ground">
+				</div>
+				<div class="plan1" id="plan1-2">
+					<h3>DRAINAGE</h3>
+					<h3>PLANS</h3>		
+				</div>
+				<div class="plan2"><p>Mes cuml dia sed in lacus ut dol eniasc etor ingerto aliiqt es sitet amet eism ictor ut ligulate ameti. dapibus.</p></div>
+				<div class="moreinfo" id="info-2">
+					<p>MORE INFO</p>
+				</div>
+			</div>
+			<div class="plan">
+				<div class="plancircle">
+					<img src="http://livedemo00.template-help.com/wordpress_53590/wp-content/uploads/2015/03/banner-img3.jpg" alt="garden">
+				</div>
+				<div class="plan1" id="plan1-3">
+					<h3>GARDEN</h3>
+					<h3>DESIGN</h3>
+				</div>
+				<div class="plan2"><p>Mes cuml dia sed in lacus ut dol eniasc etor ingerto aliiqt es sitet amet eism ictor ut ligulate ameti. dapibus.</p></div>
+				<div class="moreinfo" id="info-3">
+					<p>MORE INFO</p>
+				</div>
+			</div>
+			<div class="plan">
+				<div class="plancircle">
+					<img src="http://livedemo00.template-help.com/wordpress_53590/wp-content/uploads/2015/03/banner-img4.jpg" alt="pond">
+				</div>
+				<div class="plan1" id="plan1-4">
+					<h3>PLANTING</h3>
+					<h3>LAYOUT</h3>
+				</div>
+				<div class="plan2"><p>Mes cuml dia sed in lacus ut dol eniasc etor ingerto aliiqt es sitet amet eism ictor ut ligulate ameti. dapibus.</p></div>
+				<div class="moreinfo" id="info-4">
+					<p>MORE INFO</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="buildyourownpage">
+		<h1>BUILD YOUR OWN</h1>
+		<h1>WELL-DESIGNED LIVING SPACE</h1>
+		<h2>MES CUML DIA SED INENIASINGE DOLOR COMMETE IPSUM COMNETUS.</h2>
+		<p>Dolor nunc vule putateulr ips dol consec.Donec semp ertet laciniate ultricie upien disse comete dolo lectus fgilla itollicil tua ludin dolor nec met quam accumsan dolore. Condime netus lullam utlacus adipiscing ipsum molestie euismod estibulum vel libero ipsum sit amet sollicitudin ante. Aenean imperdiet aliquet hendrerit. Nunc interdum ullamcorper let pellentesque enim interdum at. Suspendisse malesuada dignissim est, a facilisis ligula rutrum sed.</p>
+		<div class="moreinfocircle">
+			<p>MORE INFO</p>
+		</div>
+	</div>
+	<div class="uspage">
+		<div class="gettoknow">
+			<h1>GET TO KNOW</h1>
+			<h1>MORE ABOUT US</h1>
+			<div class="personpic">
+				<img src="http://livedemo00.template-help.com/wordpress_53590/wp-content/uploads/2011/07/page1-img1.jpg" alt="a man">
+			</div>
+			<div class="uswords">
+				<h3>DAVE SMITH</h3>
+				<h3>DOLORE IPSUM</h3>
+				<p>Dolor nunc vule putateulr ips dol consec.Donec sem ertet laciniate ultricie upie disse dolor comete dolo lectus. fgilla itollicil tua ludin dolor nec met quam accumsan. Dolore condime netus lullam utlacus adipiscing ipsum molestie euismod lore estibulum vel libero ipsum sit amet sollicitudin antenean imperdiet aliquet hendrerit. Nunc interdum ullamcorper lectus, et pellentesque enim interdum at. Suspendisse malesuada dignissim est</p>
+			</div>
+			<p>Dolor nunc vule putateulr ips dol consec.Donec semp ertet laciniate ultricie upien disse comete dolo lectus fgilla itollicil tua ludin dolor nec met quam accumsan. Dolore condime netus lullam ipsu utlacus adipiscing ipsum molestie euismod lore. estibulum vel libero ipsum sit amet sollicitudin ante.</p>
+		</div>
+		<div class="whychoose">
+			<h1>WHY</h1>
+			<h1>CHOOSE US?</h1>
+			<h3>MES CUML DIA SED</h3>
+			<h3>INENIASINGE DOLOR</h3>
+			<h3>COMMETE IPSUM COMNETUS.</h3>
+			<p>Dolor nunc vule putateulr ips dol consec.Donec semp ertet laciniate ultricie upien disse comete dolo lectus fgilla itollicil tua ludin dolor nec met quam accumsan dolore. Condime netus lullam utlacus adipiscing ipsum molestie.</p>
+			<div class="moreinfo2">
+				<p>MORE INFO</p>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="howitworkspage">
+		<div class="how-col">
+			<div class="leftside2">
+				<h1>HOW IT WORKS?</h1>
+				<p>MES CUML DIA SED INENIASINGE DOLOR IPSUM COMMETE IPSUM COMNETU DOLOR IPSUM COMMETE IPSUM COMNETUS MES INENIASINGE</p>
+			</div>
+			<div class="doc">
+				<img src="http://www.tahoecitypud.com/assets/form_icon.png" alt="doc">
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="contactpage">
+		<div class="word-col">
+			<img src="http://petsroof.com/catalog/view/theme/default/image/icon_email_green.png" alt="email">
+			<p>SUBSCRIBE TO OUR NEWSLETTER TO RECEIVE NEWS, UPDATES, AND ANOTHER STUFF BY EMAIL.</p>
+		</div>
+		<div class="clearfix"></div>
+		<div class="mail-col">
+			<input type="text" class="textform">
+			<input type="submit" value="SUBSCRIBE" class="subscribe"> 
+		</div>
+		<div class="clearfix"></div>
+		<div class="foot-col">
+			<div class="logo2">
+				<img src="http://livedemo00.template-help.com/wordpress_53590/wp-content/themes/theme53590/images/footer-logo.png" alt="logo">
+			</div>
+			<p> © 2015  |  Privacy Policy</p>	
+			<div class="contact-col">
+				<div class="contact"></div>
+				<div class="contact"></div>
+				<div class="contact"></div>
+				<div class="contact"></div>
+				</div>
+			</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="contactus">
+		<p>Contact us!</p>
+	</div>
+	<div class="up">
+		<p>^</p>
+	</div>
+	<nav>
+		<ul>
+			<li>
+				<a href="#">ABOUT</a>
+				<!-- <div class="sub">
+					<ul>
+						<li><a href="#">Testimonials</a></li>
+						<li><a href="#">Archives</a></li>
+						<li><a href="#">FAQs</a></li>
+					</ul>
+				</div> -->
+			</li> 
+			<li>
+				<a href="#">OUR　PROJECT</a>
+				<!-- <div class="sub"> 
+					<ul>
+						<li><a href="#">OUR PROJECTS 2</a></li>
+						<li><a href="#">OUR PROJECTS 3</a></li>
+						<li><a href="#">OUR PROJECTS 4</a></li>
+					</ul>
+				</div> -->
+			</li>
+			<li><a href="#">SERVICES</a></li>
+			<li><a href="#">BLOG</a></li>
+			<li><a href="#">CONTACTS</a></li>
+		</ul>
+	</nav>
+	<!-- <div class="clearfix"></div> -->
+</body>
+</html>
+
