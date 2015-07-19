@@ -215,7 +215,7 @@ header nav .list-inline > li a{
   color: #bcbcbc;
 }
 
-/* Bootstrap's xs sizw */
+/* Bootstrap's xs size */
 @media (max-width: 767px){
   #cellphone{
     margin:auto;
