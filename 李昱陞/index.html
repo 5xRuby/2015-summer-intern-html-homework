@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Visionyx 排版練習</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			a {
+				color: #A1A194;
+				transition: .3s;
+			}
+			a:hover {
+				text-decoration: none;
+				color: #3498DB;
+			}
+			.text-primary: {
+				color: #3498DB;
+			}
+			header {
+				padding: 26px 0 0 0;
+			}
+			header .top-nav {
+				padding-bottom: 40px;
+			}
+			header nav.nav-account {
+				padding: 24px 0 0 5px;
+			}
+			header nav.nav-account h3 {
+				margin: 0;
+			}
+			header nav.nav-account h3 a {
+				font-size: 12px;
+				line-height: 20px;
+				font-weight: normal;
+				color: #A2A296;
+				color: rgb(161, 161, 148);
+				transition: .5s;
+			}
+
+			header nav.nav-account a:hover {
+				color: #3A99D9;
+			}
+			header nav.nav-account {
+				float: left;
+			}
+			header .top-right {
+				float: right;
+				font-size: 18px;
+				line-height: 24px;
+			}
+			header .search {
+				float: left;
+				position: relative;
+			}
+			header .search input {
+				/* Reset Default Style */
+				height: 68px;
+				border: none;
+				border-radius: 30px;
+				background: #f0f0f0;
+				padding: 23px 70px 23px 34px;
+			}
+			header .search input:focus {
+				/* Reset Default Style */
+				border: none;
+				outline: none;
+				box-shadow: 0px;
+			}
+			header .search button.btn-search {
+				
+				position: absolute;
+				right: 10px;
+				top: 13px;
+			}
+			button.btn-search {
+				font-size: 24px;
+				color: #A1A195;
+				background-color: transparent;
+			}
+			button.btn-search:hover {
+				color: #3A99D9;
+			}
+			header .i18n {
+				float: left;
+				margin-left: 24px;
+			}
+			header .i18n .btn-i18n {
+				border-radius: 30px;
+			}
+			header .i18n button {
+				width: 68px;
+				height: 68px;
+				background-color: #000;
+			}
+			header .i18n button span {
+				font-size: 14px;
+				color: #fff;
+			}
+			header h1, header h2 {
+				margin: 0;
+			}
+			header h1 {
+				font-size: 0;
+			}
+			header h1 img {
+				width: auto;
+				height: 100%;
+			}
+			header .company-info {
+				height: 90px;
+			}
+			header .company-info h1, 
+			header .company-info h2,
+			header .company-info .middle-right {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			header .company-info .middle-right {
+				/*text-align: right;*/
+				float: right;
+			}
+			header .company-info h2 {
+				line-height: 90px;
+			}
+			header .btn-cart {
+				background-color: #F0F0F0;
+				border-radius: 30px;
+				margin-left: 26px;
+			}
+			header .btn-cart button {
+				height: 68px;
+				border-radius: 30px;
+				background-color: #F0F0F0;
+				transition: .8s ;
+			}
+			header button.btn-cart-icon {
+				width: 68px;
+				font-size: 25px;
+				color: white;
+				background-color: #3498DB;
+				z-index: 2;
+			}
+
+			header button.btn-cart-icon:hover + .btn-cart-info {
+				color: #fff;
+				background-color: #000;
+			}
+			header button.btn-cart-icon:hover {
+				color: #fff;
+				background-color: #3498DB;
+			}
+			.btn-cart>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+				border-top-right-radius: 30px;
+    			border-bottom-right-radius: 30px;
+			}
+			.btn-cart:hover>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+				border-top-right-radius: 0;
+    			border-bottom-right-radius: 0;
+			}
+			header .btn-cart button.btn-cart-info:hover {
+				background-color: #000;
+				color: white;
+			}
+			.btn-cart-info span {
+				color: #B1B4BB;
+			}
+			.main-nav {
+				padding-top: 54px;
+			}
+			.main-nav ul {
+				font-size: 0;
+				margin-bottom: 0;
+			}
+			.main-nav li {
+				padding: 0;
+				border-right: 1px solid rgb(77, 80, 86);
+			}
+			.main-nav li a {
+				display: block;
+				padding: 39px 0 32px;
+				color: #fff;
+				background-color: #3B3F46;
+				border-bottom: 7px solid transparent;
+				transition: .3s;
+			}
+			.main-nav li a h3 {
+				font-size: 12px;
+				line-height: 14px;
+				margin: 0;
+			}
+			.main-nav li a:hover {
+				border-bottom: 7px solid #3498DB;
+			}
+
+			article.slider {
+				width: 100%;
+				box-sizing: border-box;
+				/*padding-top: 120px;*/
+				height: 490px;
+				overflow: hidden;
+				position: relative;
+			}
+			article.slider img {
+				/*bottom: -35px;*/
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			article.slider h2 {
+				font-size: 60px;
+				line-height: 60px;
+				color: #fff;
+				margin: 10px 0 0 0;
+				font-weight: normal;
+			}
+			article.slider h3 {
+				font-size: 25px;
+				line-height: 25px;
+				color: rgb(52, 152, 219);
+				margin: 9px 0 20px 0;
+				font-weight: normal;
+			}
+			article.slider .slider-content {
+				margin: auto;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				position: absolute;
+				display: table;
+			}
+			article.slider .slider-content>div {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			article.products-intro {
+				width: 100%;
+				background-color: #3B3F46;
+				text-align: center;
+			}
+			section.products-intro-item {
+				display: inline-block;
+				max-width: 370px;
+				padding-top: 52px;
+				overflow: hidden;
+				margin: 0 auto;
+			}
+			section.products-intro-item img {
+				border-radius: 30px;
+			}
+			section.products-intro-item div {
+				/*height: 50px;*/
+				position: relative;
+				bottom: 70px;
+				text-align: left;
+			}
+			section.products-intro-item h3 {
+				width: 100%;
+				color: #fff;
+				font-size: 35px;
+				font-weight: normal;
+				text-transform: uppercase;
+				line-height: 37px;
+				padding: 18px 20px 38px 20px;
+				border-radius: 30px;
+				/*position: relative;
+				top: -100px;
+				bottom: -30px;*/
+				margin: 0;
+			}
+			section.products-intro-item span { 
+				color: #000;
+				font-size: 20px;
+				line-height: 25px;
+				margin-top: 10px;
+			}
+			section.products-intro-item span.fa {
+				font-size: 45px;
+				color: #fff;
+				position: absolute;
+				top: 50px;
+				right: 15px;
+				margin: auto;
+			}
+			section.products-intro-item:nth-child(1) h3 {
+				background-color: #3498DB;				
+			}
+			section.products-intro-item:nth-child(2) h3 {
+				background-color: #96CA2D;				
+			}
+
+			section.products-intro-item:nth-child(3) h3 {
+				background-color: #E74C3C;				
+			}
+
+			article.ad-service {
+				background: #3498db;
+				position: relative;
+				padding-top: 126px;
+				padding-bottom: 126px;
+
+			}
+			article.ad-service::after {
+				content: '';
+				display: block;
+				position: absolute;
+				bottom: 0;
+				top: 0;
+				right: 0;
+				width: 50%;
+				background: #3b3f46;
+			}
+			article.ad-service section {
+				color: #fff;
+				z-index: 1;
+			}
+			article.ad-service span.fa {
+				font-size: 105px;
+				margin-top: 20px;
+			}
+			article.ad-service div.ad-service-text {
+				float: left;
+			}
+			article.ad-service section h3 {
+				font-size: 60px;
+				font-weight: normal;
+				line-height: 58px;
+				display: block;
+			}
+			article.ad-service section h4 {
+				font-size: 24px;
+				font-weight: normal;
+				line-height: 27px;
+				margin: 8px 0 20px 0;
+				display: block;
+			}
+			article.testimonial {
+				height: 500px;
+				background: #000 url('images/testmonial.jpg') no-repeat fixed;
+				background-size: cover;
+				text-align: center;
+				overflow: hidden;
+			}
+			article.testimonial>div {
+				display: table;
+				height: 100%;
+				display: table;
+			}
+			article.testimonial>div>div {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			article.testimonial h3 {
+				font-size: 100px;
+				line-height: 100px;
+				color: #fff;
+			}
+			article.testimonial p {
+				margin: 41px 0 20px 0;
+				padding: 0 150px;
+				font-size: 20px;
+				line-height: 25px;
+				color: #B0AEAD;
+			}
+
+
+			.featured-product h2 {
+				font-size: 40px;
+				line-height: normal;
+				color: rgb(59, 63, 70);
+				margin-top: 65px;
+				margin-bottom: 65px;
+			}
+			.featured-product-item {
+				margin-bottom: 40px;
+			}
+			.featured-product-item h3 {
+				margin: 0;
+			}
+			.featured-product-item h3 a {
+				font-size: 14px;
+				line-height: 24px;
+				color: rgb(59, 63, 70);
+				margin-top: 14px;
+			}
+			.featured-product-item p {
+				font-size: 13.33333px;
+				line-height: 18px;
+				color: rgb(188, 188, 188);
+			}
+			
+			
+			div.feature-img {
+				background-color: #F8F8F8;
+				border-radius: 30px;
+				text-align: center;
+				max-width: 255px;
+				/*height: 255px;*/
+				overflow: hidden;
+			}
+			div.feature-img img {
+				display: inline-block;
+			}
+
+			.featured-product-item h4.price {
+				color: #3498DB;
+				font-size: 25px;
+				line-height: 25px;
+
+			}
+			.featured-product-item .price span {
+				color: #DADADB;
+				font-size: 15px;
+				line-height: 17px;
+				margin-left: 11px;
+				text-decoration: line-through;
+			}
+
+			.other-info {
+				background-color: #F7F7F7;
+
+			}
+			.other-info > div {
+				padding-top: 66px;
+				padding-bottom: 66px;
+			}
+			.other-info .outer {
+				background-color: #fff;
+				border-radius: 30px;
+				min-height: 405px;
+				height: 100%;
+			}
+			
+			.other-info .content {
+				padding: 33px 30px 39px 38px;
+			}
+
+			.other-info h3 {
+				font-size: 20px;
+				line-height: 20px;
+				margin: 10px 0 20px 0;
+			}
+			.other-info ul {
+				list-style: none;
+				padding-left: 25px;
+			}
+			.other-info ul li {
+				position: relative;
+			}
+			.other-info ul li a {
+				font-size: 13.33333px;
+				line-height: 30px;
+			}
+			.other-info ul li a::before {
+				content: '';
+				position: absolute;
+				left: -18px;
+				top: 12px;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 4px 0 4px 4px;
+				border-color: transparent transparent transparent #3498db;
+			}
+			.feature-icon {
+				background-color: #3498DB;
+				font-size: 32px;
+				line-height: 50px;
+				text-align: center;
+				color: white;
+				padding: 0;
+				margin-top: 20px;
+				width: 50px;
+				height: 50px;
+				border-radius: 30px;
+			}
+
+			@media (min-width: 768px) and (max-width: 1200px) {
+				section.products-intro-item h3 {
+					font-size: 28px;
+				}
+				section.products-intro-item span.fa {
+					font-size: 30px;
+				}
+				.other-info .content {
+					padding: 20px;
+				}
+			}
+			
+			@media (min-width: 768px) and (max-width: 992px) {
+				section.products-intro-item h3 {
+					font-size: 22px;
+					line-height: 28px;
+					padding: 10px 20px 15px 15px;
+				}
+				
+				section.products-intro-item span.fa {
+					top: 30px;
+				}
+				article.testimonial h3 {
+					font-size: 75px;
+				}
+				article.testimonial h3 {
+					font-size: 75px;
+				}
+
+			}
+			@media(max-width: 768px) {
+				section.products-intro-item {
+					float: none;
+				}
+				article.ad-service {
+					padding: 70px 0;
+				}
+				article.ad-service::after {
+					width: 100%;
+					top: 50%;
+				}
+				article.ad-service section {
+					text-align: center;
+				}
+				article.ad-service section:first-child {
+					padding-bottom: 70px;
+				}
+				article.ad-service section:last-child {
+					padding-top: 70px;
+				}
+				article.testimonial h3 {
+					font-size: 32px;
+					line-height: 40px;
+				}
+				article.testimonial p {
+					font-size: 16px;
+					padding-left: 0;
+					padding-right: 0;
+				}
+				.featured-product, 
+				.feature-img {
+					text-align: center;
+					margin: auto;
+				}
+				.outer .content {
+					margin: 20px auto;
+				}
+				
+			}
+		</style>
+	</head>
+	<body title="Visionyx 排版練習" data-grid-framework="b3" data-grid-color="blue" data-grid-opacity="0.1" data-grid-zindex="10" data-grid-gutterwidth="30px" data-grid-nbcols="12">
+		<h1 class="sr-only">
+			Visionyx 排版練習
+		</h1>
+		<header class="container">
+			
+				<div class="top-nav clearfix">
+					<nav class="nav-account">
+						<h2 class="sr-only">My Account</h2>
+						<ul class="list-inline text-uppercase">
+							<li><h3><a href="">Home</a></h3></li>
+							<li><h3><a href="">Wish List (0)</a></h3></li>
+							<li><h3><a href="">My Account</a></h3></li>
+							<li><h3><a href="">Shooping Cart</a></h3></li>
+							<li><h3><a href="">Checkout</a></h3></li>
+						</ul>
+					</nav>
+					<div class="top-right">
+						<section class="search">
+							<h2 class="sr-only">Search</h2>
+							<input type="text" name="search" placeholder="Search...">
+							<button type="submit" class="btn btn-search">
+								<span class="glyphicon glyphicon-search"></span>
+								<span class="sr-only">Submit</span>
+							</button>
+						</section>
+						<section class="i18n">
+							<h2 class="sr-only">Internationalization and Localization</h2>
+							<div class="btn-group" role="group" aria-label="i18n">
+								<div class="btn-group dropdown" role="group">
+									<button id="currencymenu" class="btn btn-i18n dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+										<span class="glyphicon glyphicon-usd"></span>
+										<span class="sr-only">Currency</span>
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu" aria-labelledby="currencymenu">
+										<li>
+											<a href=""> <span class="glyphicon glyphicon-bitcoin"></span> Bitcoin</a>
+										</li>
+										<li>
+											<a href=""> <span class="glyphicon glyphicon-yen"></span> Japanese Yen </a>
+										</li>
+										<li>
+											<a href=""> <span class="glyphicon glyphicon-eur"></span> Euro Dollar </a>
+										</li>
+									</ul>
+								</div>
+								<div class="btn-group dropdown" role="group">
+									<button id="langugemenu" class="btn btn-i18n dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+										<span class="fa fa-globe"></span>
+										<span class="sr-only">Language</span>
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu" aria-labelledby="languagemenu">
+										<li>
+											<a href="">中文</a>
+										</li>
+										<li>
+											<a href="">English</a>
+										</li>
+										<li>
+											<a href="">Deutsch</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+				<div class="company-info">
+					<h1>
+						Visionyx 排版練習
+						<img src="images/logo.png" alt="Visionyx 排版練習" class="img-responsive">
+					</h1>
+					<div class="middle-right" itemscope itemtype="http://schema.org/LocalBusiness">
+						<span class="sr-only">
+							Phone Number:
+						</span>
+						<h2>
+							<span class="fa fa-phone text-primary"></span>
+							<span itemprop="telephone"><a href="tel:18002345677">1-800-234-5677</a></span>
+						</h2>
+						<div class="btn-group btn-cart">
+						 	<button type="button" class="btn btn-cart-icon">
+						 		<span class="fa fa-shopping-cart"></span>
+						 	</button>
+						 	<button type="button" class="btn btn-cart-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						 		Cart: <span>0 item(s) - .00</span>
+						 		<span class="caret"></span>
+						    	<span class="sr-only">Toggle Dropdown</span>
+						  	</button>
+							 <ul class="dropdown-menu">
+							    <li><a href="#">Your Shopping Cart is Empty!</a></li>
+						  	</ul>
+						</div>
+					</div>
+				</div>
+				<div class="main-nav">
+					<nav>
+						<h2 class="sr-only">Main Navigation</h2>
+						<ul class="list-inline text-uppercase text-center">
+							<li class="col-xs-12 col-sm-4 col-md-2"><a href=""><h3>Color Lenses</h3></a></li>
+							<li class="col-xs-12 col-sm-4 col-md-2"><a href=""><h3>Monthlies</h3></a></li>
+							<li class="col-xs-12 col-sm-4 col-md-2"><a href=""><h3>Dailies</h3></a></li>
+							<li class="col-xs-12 col-sm-4 col-md-2"><a href=""><h3>Extended Wear</h3></a></li>
+							<li class="col-xs-12 col-sm-4 col-md-2"><a href=""><h3>Coloured & Tinted</h3></a></li>
+							<li class="col-xs-12 col-sm-4 col-md-2"><a href=""><h3>Accessories</h3></a></li>
+						</ul>
+					</nav>
+				</div>
+		</header>
+		
+		<article class="slider">
+			<img src="images/slides3.jpg" alt="">
+			<div class="container slider-content">
+				<div>
+					<h2>A WIDE RANGE OF SOFT</h2>
+					<h3>AND COMFORTABLE EYEWEAR PRODUCTS</h3>
+					<button></button>
+				</div>
+			</div>
+		</article>
+		
+		<article class="products-intro">
+			<h2 class="sr-only">Product Category</h2>
+			<div class="container">
+				<div class="row">
+					<section class="col-xs-12 col-sm-4 products-intro-item">
+						<img src="images/product-info2.jpg" alt="Coloured & Tinted" class="img-responsive">
+						<div>
+							<h3><span>Coloured</span> <br>& Tinted</h3>
+							<span class="fa fa-search"></span>
+						</div>
+					</section>
+					<section class="col-xs-12 col-sm-4 products-intro-item">
+						<img src="images/product-info1.jpg" alt="Lens & Eyes Care" class="img-responsive">
+						<div>
+							<h3><span>Lens &</span> <br>Eyes Care</h3>
+							<span class="fa fa-search"></span>
+						</div>
+					</section>
+					<section class="col-xs-12 col-sm-4 products-intro-item">
+						<img src="images/product-info3.jpg" alt="Contact Lens Accessories" class="img-responsive">
+						<div>
+							<h3><span>Contact Lens</span> <br>Accessories</h3>
+							<span class="fa fa-search"></span>
+						</div>
+					</section>
+				</div>
+			</div>
+		</article>
+
+		<article class="testimonial">
+			<h2 class="sr-only">Testimonial</h2>
+			<div class="container">
+				<div class="row">
+					<section>
+						<h3>RECOMMENDED BY OPTOMETRIST</h2>
+						<p>MES CUML DIA SED INENIAS INGERTO LOT ALIIQT DOLORE IPSUM COMMETE.</p>
+					</section>
+						
+				</div>
+			</div>
+		</article>
+
+		<article class="ad-service">
+			<h2 class="sr-only">How to order?</h2>
+			<div class="container">
+				<section class="col-sm-6 clearfix">
+					<span class="fa fa-phone-square col-xs-12 col-md-3"></span>
+					<div class="ad-service-text col-xs-12 col-md-offset-1 col-md-8">
+						<h3 class="text-uppercase">Order <br>Online</h3>
+						<h4>HOURS: 8AM -11PM</h4>
+					</div>
+					
+				</section>
+				<section class="col-sm-6 clearfix">
+					<span class="fa fa-truck col-xs-12 col-md-3"></span>
+					<div class="ad-service-text col-xs-12 col-md-offset-1 col-md-8">
+						<h3 class="text-uppercase">Free <br>Delivery</h3>
+						<h4>ON ORDERS OVER $99</h4></div>
+					</div>
+				</section>
+			</div>
+		</article>
+		
+		<article class="featured-product container">
+			<h2>FEATURED</h2>
+			<section class="featured-product-item col-xs-12 col-sm-6 col-md-3">
+				<div class="feature-img">
+					<img src="images/AENEAN VIVERRA.png" alt="" class="img-responsive">
+				</div>
+				<h4 class="price">$100.00</h4>
+				<h3><a href="">AENEAN VIVERRA</a></h3>
+				<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+				<h4><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><span class="sr-only">5 Star</span></h4>
+			</section>
+			<section class="featured-product-item col-xs-12 col-sm-6 col-md-3">
+				<div class="feature-img">
+					<img src="images/ALIQUAM DOLOR TELLUS.png" alt="" class="img-responsive">
+				</div>
+				<h4 class="price">$150.00 <span>$200.00</span></h4>
+				<h3><a href="">ALIQUAM DOLOR TELLUS</a></h3>
+				<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+				<h4><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><span class="sr-only">5 Star</span></h4>
+			</section>
+			<section class="featured-product-item col-xs-12 col-sm-6 col-md-3">
+				<div class="feature-img">
+					<img src="images/ALIQUAM EGET.png" alt="" class="img-responsive">
+				</div>
+				<h4 class="price">$80.00 <span>$100.00</span></h4>
+				<h3><a href="">ALIQUAM EGET</a></h3>
+				<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+				<h4><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><span class="sr-only">5 Star</span></h4>
+			</section>
+			<section class="featured-product-item col-xs-12 col-sm-6 col-md-3">
+				<div class="feature-img">
+					<img src="images/DOLOR SIT AMET.png" alt="" class="img-responsive">
+				</div>
+				<h4 class="price">$80.00 <span>$100.00</span></h4>
+				<h3><a href="">DOLOR SIT AMET</a></h3>
+				<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+				<h4><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><span class="sr-only">5 Star</span></h4>
+			</section>
+			<section class="featured-product-item col-xs-12 col-sm-6 col-md-3">
+				<div class="feature-img">
+					<img src="images/QUISQUE EGET.png" alt="" class="img-responsive">
+				</div>
+				<h4 class="price">$400.00 <span>$500.00</span></h4>
+				<h3><a href="">QUISQUE EGET</a></h3>
+				<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+				<h4><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><span class="sr-only">5 Star</span></h4>
+			</section>
+			<section class="featured-product-item col-xs-12 col-sm-6 col-md-3">
+				<div class="feature-img">
+					<img src="images/CONSECTETUR ADIPISCING.png" alt="" class="img-responsive">
+				</div>
+				<h4 class="price">$400.00 <span>$500.00</span></h4>
+				<h3><a href="">CONSECTETUR ADIPISCING</a></h3>
+				<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+				<h4><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><span class="sr-only">5 Star</span></h4>
+			</section>
+			<section class="featured-product-item col-xs-12 col-sm-6 col-md-3">
+				<div class="feature-img">
+					<img src="images/VEHICULA LIBERO SED.png" alt="" class="img-responsive">
+				</div>
+				<h4 class="price">$101.00</h4>
+				<h3><a href="">VEHICULA LIBERO SED</a></h3>
+				<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+				<h4><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><span class="sr-only">5 Star</span></h4>
+			</section>
+			<section class="featured-product-item col-xs-12 col-sm-6 col-md-3">
+				<div class="feature-img">
+					<img src="images/VESTIBULUM ID TIN.png" alt="" class="img-responsive">
+				</div>
+				<h4 class="price">$100.00</h4>
+				<h3><a href="">VESTIBULUM ID TIN</a></h3>
+				<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+				<h4><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><span class="sr-only">5 Star</span></h4>
+			</section>
+		</article>
+
+		<article class="other-info">
+			<div class="container">
+				<h2 class="sr-only">Other Information</h2>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<section class="outer">
+						<div class="content">
+							<h3>Follow Us on FaceBook</h3>
+						</div>
+					</section>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<section class="outer">
+						<div class="content">
+							<h3 class="sr-only">Our Feature</h3>
+							
+							<section>
+								<span class="fa fa-phone col-sm-3 feature-icon"></span>
+								<div class="col-sm-9">
+									<h4>FREE SHIPPING</h4>
+									<p>Donec vitae diam ut purus luctus filisis. Nullectus non eros tristique ultric.</p>
+								</div>
+							</section>
+							<section>
+								<span class="fa fa-truck col-sm-3 feature-icon"></span>
+								<div class="col-sm-9">
+									<h4>ONLINE SUPPORT</h4>
+									<p>Donec vitae diam ut purus luctus filisis. Nullectus non eros tristique ultric.</p>
+								</div>
+								
+							</section>
+							<section>
+								<span class="fa fa-qrcode col-sm-3 feature-icon"></span>
+								<div class="col-sm-9">
+									<h4>GIFT CARD</h4>
+									<p>Donec vitae diam ut purus luctus filisis. Nullectus non eros tristique ultric.</p>
+								</div>
+							</section>
+						</div>
+					</section>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<section class="outer">
+						<div class="content">
+							<h3>Useful Links</h3>
+							<ul>
+								<li><a href="">Lorem ipsum dolor.</a></li>
+								<li><a href="">Lorem ipsum dolor.</a></li>
+								<li><a href="">Lorem ipsum dolor.</a></li>
+								<li><a href="">Lorem ipsum dolor.</a></li>
+								<li><a href="">Lorem ipsum dolor.</a></li>
+								<li><a href="">Lorem ipsum dolor.</a></li>
+								<li><a href="">Lorem ipsum dolor.</a></li>
+								<li><a href="">Lorem ipsum dolor.</a></li>
+							</ul>
+						</div>
+					</section>
+				</div>
+			</div>
+		</article>
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
