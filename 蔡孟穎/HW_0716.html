@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>HW0716</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			.header,.product-div,.last-page{
+				background-color:#F5F5F5;
+				
+			}
+			.phone-text,.price,.phone a:hover,.carousel-caption p{
+				color:#3498DB;
+			}
+			.cart-icon,.cart-icon:hover,.shop-now-cart,.shop-now-cart:hover,.more-info,.more-info-icon:hover,.blue-caption,.blue-order-div,.product-cart,.product-compare:hover,.product-star:hover,.last-icon,.more-info2{
+				background-color:#3498DB;
+			}
+			.greytext,.phone a,.product-info{
+				color:#828589;	
+			}
+			.header{
+				position:fixed;
+				top:0px;
+				z-index:100;
+			}
+			.cart-dropdown,.shop-now2:hover{
+				background-color:#EBEBEC;
+			}
+			.cart-dropdown:hover,.nav-btn,.nav-btn:hover,.nav-btn2,.nav-btn2:hover,.sub-nav-menu,.sub-nav-menu li a:hover,.shop-now1,.thumbnail-page,.more-info1,.delivery-div,.product-cart:hover,.product-compare,.product-star,.footer{
+				background-color:#3B3F46;
+			}
+			.cart-dropdown:hover span,.nav-btn,.dropdown-menu li a,.nav-btn:hover,.dropdown-menu li a:hover,.nav-btn2,.nav-btn2:hover,.shop-now1,.shop-now2,.shop-now2:hover,.cart-icon,.cart-icon:hover,.caption h1,.recommend-page h1,.more-info1,.more-info2,.more-info2:hover{
+				color:#FFF;
+			}
+			.phone a{
+				font-size:1.6em;
+			}
+			.phone,.cart-btn{
+				margin-top:10%;
+			}
+			.cart-icon,.cart-dropdown,.shop-now1,.shop-now2{
+				border:0;
+				border-radius:20px;
+			}
+			.cart-icon,.cart-dropdown,.shop-now1,.shop-now2,.more-info1,.more-info2{
+				height:3.5em;
+			}
+			.cart-icon,.shop-now2,.more-info2{
+				width:3.5em;
+			}
+			.nav-group{
+				margin-top:2%;
+				width:100%;
+			}
+			.nav-btn{
+				margin:auto;
+				/*width:18%;*/
+
+			}
+			.nav-btn2{
+				margin-left:0;
+				margin-right:0;
+				width:100%;
+			}
+			.month-group{
+				padding-left:0;
+				padding-right:0;
+			}
+			.sub-nav-btn{
+				/*width:100%;*/
+			}
+			.nav-btn,.sub-nav-btn,.nav-btn2{
+				border-radius:0;
+				border:0;
+				height:3em;
+			}
+			.sub-nav-menu{
+				border-radius:0;
+			}
+			.nav-btn:hover,.sub-nav-btn:hover,.nav-btn2:hover{
+				border-bottom:5px solid #3498DB;
+			}
+			.nav-btn,.nav-btn2{
+				border-left:1px solid #828589;
+			}
+			..nav-btn:first-child{
+				border-left:0;
+			}
+			.top-blank{
+				height:10em;
+			}
+			.carousel-caption h1{
+				text-shadow: none;
+				font-size: 4em;
+				margin-left:-60%;
+			}
+			.carousel-caption p{
+				text-shadow: none;
+				font-size: 2em;
+				margin-left:-60%;
+			}
+			.shop-now-group{
+				margin-left:-60%;
+			}
+			.shop-now2:hover{
+				background-color:#3498DB;
+			}
+			.carousel-indicators{
+				width:50%;
+				margin-left: 0;
+				border:0;
+
+			}
+			.carousel-indicators li{
+				background-color:#FFF;
+				width:20px;
+				height:20px;
+			}
+			.carousel-indicators .active {
+				border:2px solid #3498DB;
+				background-color:rgba(0,0,0,0);
+				height:20px;
+				width:20px;
+			}
+			.carousel-indicators .active li{
+				background-color:rgba(0,0,0,0);
+			}
+			.thumbnail-page{
+				padding:5%;
+			}
+			.green-caption{
+				background-color:#96CA2D;
+			}
+			.red-caption{
+				background-color:#E74C3C;
+			}
+			.thumbnail{
+				border-radius:20px;
+				overflow:hidden;
+				padding:0;
+				position:relative;
+				border:0;
+			}
+			.thumbnail img{
+				width: 100%;
+			}
+			.caption{
+				border:0;
+				position:absolute;
+				top:60%;
+				width:100%;
+				border-radius:20px;
+			}
+			.caption h3{
+				font-size: 1.5em;
+			}
+			.caption h1{
+				font-size: 3em;
+			}
+			.recommend-page{
+				background-image:url(http://livedemo00.template-help.com/opencart_54980/image/cache/catalog/parallax-1-2050x1203.jpg);
+				height:800px;
+				padding:10%;
+			}
+			.recommend-page h1{
+				font-size: 6em;
+				text-align:center;
+			}
+			.recommend-page p{
+				font-size: 1.5em;
+				color:#B0AEAD;
+				text-align:center;
+			}
+			.more-info-group{
+				display:block;
+				margin:auto;
+				margin-top:10%;
+				width:15%;
+				float:none;
+			}
+			.more-info1,.more-info2{
+				border:0;
+				margin:auto;
+			}
+			.blue-order-div,.delivery-div{
+				height:500px;
+				color:#FFF;
+				padding:2%;
+				padding-top:10%;
+			}
+			.blue-order-div i,.delivery-div i{
+				font-size: 11em;
+			}
+			.blue-order-div h1,.delivery-div h1{
+				font-size: 3em;
+			}
+			.blue-order-div p,.delivery-div p{
+				font-size: 2em;
+				padding:0;
+			}
+			.feature-page{
+				padding:2%;
+			}
+			.feature-page h1{
+				margin-bottom:5%;
+			}
+			.product-div{
+				border: 1em solid #FFF ;
+				border-radius:50px;
+				padding-bottom:1em;
+			}
+			.product-pic img{
+				width:100%;
+			}
+			.price{
+				font-size: 2em;
+			}
+			.product-info{
+				font-size: 0.8em;
+			}
+			.product-compare,.product-star,.product-cart{
+				border-radius:100%;
+				width:3em;
+				height:3em;
+				font-size: 1.6em;
+				padding:1em;
+				color:#FFF;
+			}
+			.last-page{
+				padding:2em;
+			}
+			.last-div{
+				background-color:#FFF;
+				border-radius:30px;
+				margin:0;
+				border: 1em solid #F5F5F5 ;
+				height:400px;
+			}
+			.fb{
+				width: 80%;
+				height: 300px;
+				background-color:#6FF;
+			}
+			.last-icon{
+				margin-top: 1em;
+				border-radius:100%;
+				width: 2.5em;
+				height: 2.5em;
+				color:#FFF;
+				padding:5%;
+				font-size: 2em;
+			}
+			.last-text{
+				margin-top: 1em;
+			}
+			.last-text h3,.last-link h3{
+				font-size: 1.2em;
+				color:#3B3F46;
+			}
+			.last-text p{
+				color:#828589;
+				font-size: 0.8em;
+			}
+			.last-link li{
+				margin-top:1em;
+				color:#828589;
+				font-size: 0.8em;
+			}
+			.last-link a{
+				color:#828589;
+				text-decoration:none;
+			}
+			.footer{
+				height:300px;
+			}
+			.foot-div h3{
+				color:#3498DB;
+				font-size: 1.2em;
+			}
+			.foot-div p:hover{
+				color:#3498DB;
+			}
+			.foot-div p{
+				color:#828589;
+				font-size: 0.8em;
+			}
+			.foot-div h1{
+				color:#3498DB;
+				font-size: 1.5em;
+			}
+			.foot-div h1:hover{
+				color:#FFF;
+			}
+			.contact{
+				font-size: 1.5em;
+				color:#828589;
+			}
+			.contact:hover{
+				color:#3498DB;
+			}
+			
+			.powered{
+				color:#828589;
+				margin-top:3em;
+			}
+			@media (max-width: 767px){ 
+				.logo img{
+					width:80%;
+					margin:10%;
+				}
+				.header{
+					position:relative;
+				}
+				.head-div{
+					padding:0;
+				}
+				.phone{
+					text-align:center;
+				}				.cart-btn{
+					display:block;
+					width:210px;
+					margin:10% auto 10% auto;
+				}
+				.nav-btn2{
+					width:100%;
+				}
+				.nav-btn, .nav-btn2,.sub-nav-btn{
+					border-left:0;
+					border-top:1px solid #FFF;
+				}:hover
+				.nav-btn:hover, .nav-btn2:hover,.sub-nav-btn:hover{
+					border-bottom:0;
+					background-color:#3498DB;
+				}
+				.sub-nav-menu li:first-child a{
+					border-top:0;
+				}
+				.top-blank{
+					height:0;
+				}
+				.month-group{
+					padding:0;
+					margin-left:0;
+				}
+				.thumbnail-page{
+					height:75em;
+					position:static;
+				}
+				.recommend-page{
+					position:static;
+				}
+				.recommend-page h1{
+					font-size: 2em;
+				}
+				.recommend-page p{
+					font-size: 1em;
+				}
+				.product-compare,.product-star,.product-cart{
+					width: 2em;
+					height: 2em;
+					padding:0.5em;
+				}
+				.product-div .col-sm-4{
+					width:33%;
+					margin:0;
+					float:left;
+				}
+				.product-div{
+					padding-bottom:5em;
+				}
+				.foot-logo{
+					width:100%;
+				}
+				.last-icon{
+					padding:0.6em;
+					padding-left:0.7em;
+				}
+				.foot-div,.foot-logo{
+					/*display:none;*/
+					position:absolute;
+					left:-10000px;
+				}
+			}
+		</style>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:http:// -->
+		<!--[if lt IE 9]>
+			<script src="https:http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https:http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container-fluid header">
+			<div class="col-lg-10 col-lg-offset-1 col-xs-10 col-xs-offset-1">
+				<div class="col-lg-6 col-xs-12 head-div">
+					<div class="logo">
+						<img src="http://livedemo00.template-help.com/opencart_54980/image/catalog/logo.png" alt="">
+					</div>					
+				</div>
+				<div class="col-lg-3 col-xs-12 head-div">
+					<div class="phone">
+						<a><i class="glyphicon glyphicon-earphone phone-text"></i>1-800-234-5677</a>
+					</div>
+			
+				</div>
+				<div class="col-lg-3 col-xs-12 head-div">
+					<div class="btn-group cart-btn">
+						<button type="button" class="btn btn-default cart-icon"><i class="glyphicon glyphicon-shopping-cart"></i></button>
+					 	<button type="button" class="btn btn-default dropdown-toggle cart-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class=".grey-text">Cart: 0 item(s) - $0.00<span class="caret"></span></span>
+					 	</button>
+					 	<ul class="dropdown-menu">
+					    	<li><a href="#">Your shopping cart is empty!</a></li>
+					 	</ul>
+					</div>		
+				</div>
+
+				<div class="btn-group col-lg-12 nav-group" role="group" aria-label="...">
+				  	<button type="button" class="btn btn-default col-lg-2 col-xs-12 nav-btn">COLOR LENSES</button>
+				  	<div class="btn-group col-xs-12 col-lg-2 month-group " role="group">
+					    <button type="button" class="btn btn-default dropdown-toggle nav-btn2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					      	MONTHLIES
+					    </button>
+					    <ul class="dropdown-menu sub-nav-menu">
+					    	<li><a href="#" class="sub-nav-btn">Aenean viverra</a></li>
+					    	<li><a href="#" class="sub-nav-btn">Nullam iaculis</a></li>
+					    	<li><a href="#" class="sub-nav-btn">Phasellus vel</a></li>
+					    	<li><a href="#" class="sub-nav-btn">Praesent imperdiet</a></li>
+					    	<li><a href="#" class="sub-nav-btn">Praesent sodales</a></li>
+					    </ul>
+				    </div>
+				    <button type="button" class="btn btn-default col-lg-2 col-xs-12 nav-btn">DAILIES</button>
+				    <button type="button" class="btn btn-default col-lg-2 col-xs-12 nav-btn">EXTENDED WEAR</button>
+				    <button type="button" class="btn btn-default col-lg-2 col-xs-12 nav-btn">COLOURED & TINTED</button>
+				    <button type="button" class="btn btn-default col-lg-2 col-xs-12 nav-btn">ACCESSORIES</button>
+				</div>
+
+
+
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="top-blank">
+				
+			</div>
+			<div class="row">
+				<div id="carousel-id" class="carousel slide" data-ride="carousel">
+				    <div class="carousel-inner">
+				        <div class="item">
+				            <img src="http://livedemo00.template-help.com/opencart_54980/image/cache/catalog/slide-1-2050x666.jpg">
+				            <div class="container">
+				                <div class="carousel-caption">
+				                    <h1>OFFERING THE HIGHEST</h1>
+				                    <p>QUALITY CONTACT LENSES</p>
+				                    <a href="#">
+				                    	<div class="btn-group shop-now-group">
+				                    		<button type="button" class="btn btn-default shop-now1">SHOP NOW!</button>
+				                    		<button type="button" class="btn btn-default shop-now-cart shop-now2"><i class="glyphicon glyphicon-shopping-cart"></i></button>
+				                    	</div>
+				                    </a>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="item">
+				            <img src="http://livedemo00.template-help.com/opencart_54980/image/cache/catalog/slide-2-2050x666.jpg">
+				            <div class="container">
+				                <div class="carousel-caption">
+				                    <h1>A WIDE RANGE OF SOFT</h1>
+				                    <p>AND COMFORTABLE EYEWEAR PRODUCTS</p>
+				                    <a href="#">
+				                    	<div class="btn-group shop-now-group">
+				                    		<button type="button" class="btn btn-default shop-now1">SHOP NOW!</button>
+				                    		<button type="button" class="btn btn-default shop-now-cart shop-now2"><i class="glyphicon glyphicon-shopping-cart"></i></button>
+				                    	</div>
+				                    </a>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="item active">
+				            <img src="http://livedemo00.template-help.com/opencart_54980/image/cache/catalog/slide-3-2050x666.jpg">
+				            <div class="container">
+				                <div class="carousel-caption">
+				                    <h1>100% SATISFACTION.</h1>
+				                    <p>FREE EXCHANGES. FREE RETURNS</p>
+				                    <a href="#">
+				                    	<div class="btn-group shop-now-group">
+				                    		<button type="button" class="btn btn-default shop-now1">SHOP NOW!</button>
+				                    		<button type="button" class="btn btn-default shop-now-cart shop-now2"><i class="glyphicon glyphicon-shopping-cart"></i></button>
+				                    	</div>
+				                    </a>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				    <div class="">
+				    	<ol class="carousel-indicators">
+					        <li data-target="#carousel-id" data-slide-to="0" class=""></li>
+					        <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+					        <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+					    </ol>	
+				    </div>
+				    
+				    <!-- <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> -->
+				    <!-- <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
+				</div>			
+			</div>
+			<div class="row">
+				<div class="col-sm-12 thumbnail-page">
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="thumbnail">
+							<img src="http://livedemo00.template-help.com/opencart_54980/image/cache/catalog/banner-1-370x286.jpg" alt="">
+							<div class="caption blue-caption">
+								<h3>COLOURED</h3>
+								<h1>& TINTED   <i class="glyphicon glyphicon-search"></i></h1>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="thumbnail">
+							<img src="http://livedemo00.template-help.com/opencart_54980/image/cache/catalog/banner-2-370x286.jpg" alt="">
+							<div class="caption green-caption">
+								<h3>LENS &</h3>
+								<h1>EYE CARE   <i class="glyphicon glyphicon-search"></i></h1>
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="thumbnail">
+							<img src="http://livedemo00.template-help.com/opencart_54980/image/cache/catalog/banner-3-370x286.jpg" alt="">
+							<div class="caption red-caption">
+								<h3>CONTACT LENS</h3>
+								<h1>ACCESSORIES   <i class="glyphicon glyphicon-search"></i></h1>
+								
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 recommend-page">
+					<h1>RECOMMENDED BY OPTOMETRIST</h1>
+					<p>MES CUML DIA SED INENIAS INGERTO LOT ALIIQT DOLORE IPSUM COMMETE.</p>
+					<div class="btn-group more-info-group">
+				        <button type="button" class="btn btn-default more-info1">MORE INFO</button>
+				        <button type="button" class="btn btn-default more-info-icon more-info2"><i class="glyphicon glyphicon-file"></i></button>
+				    </div>
+				</div>
+				<div class="col-sm-6 blue-order-div">
+					<div class="col-sm-5">
+						<i class="glyphicon glyphicon-phone-alt"></i>
+					</div>
+					<div class="col-sm-7">
+						<h1>ORDER</h1>
+						<h1>ONLINE</h1>
+						<p>HOURS: 8AM -11PM</p>
+					</div>
+				</div>
+				<div class="col-sm-6 delivery-div">
+					<div class="col-sm-5">
+						<i class="glyphicon glyphicon-road"></i>
+					</div>
+					<div class="col-sm-7">
+						<h1>FREE</h1>
+						<h1>DELIVERY</h1>
+						<p>ON ORDERS OVER $99</p>
+					</div>
+				</div>
+				<div class="col-sm-12 feature-page">
+					<h1>FEATURED</h1>
+					<div class="col-sm-3 product-div">
+						<div class="col-sm-12 product-pic">
+							<img src="http://livedemo00.template-help.com/opencart_54980/image/cache/catalog/product-46-270x270.png" alt="">
+						</div>
+						<p class="price">$100.00</p>
+						<p class="product-name">AENEAN VIVERRA</p>
+						<p class="product-info">Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+						<p class="product-rated">★★★★★</p>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-resize-horizontal product-compare"></i>
+						</div>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-star product-star"></i>
+						</div>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-shopping-cart product-cart"></i>
+						</div>
+					</div>
+					<div class="col-sm-3 product-div">
+	 					<div class="col-sm-12 product-pic">
+							<img src="http://livedemo00.template-help.com/opencart_54980/image/cache/catalog/product-46-270x270.png" alt="">
+						</div>
+						<p class="price">$100.00</p>
+						<p class="product-name">AENEAN VIVERRA</p>
+						<p class="product-info">Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+						<p class="product-rated">★★★★★</p>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-resize-horizontal product-compare"></i>
+						</div>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-star product-star"></i>
+						</div>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-shopping-cart product-cart"></i>
+						</div>
+					</div>
+					<div class="col-sm-3 product-div">
+	 					<div class="col-sm-12 product-pic">
+							<img src="http://livedemo00.template-help.com/opencart_54980/image/cache/catalog/product-46-270x270.png" alt="">
+						</div>
+						<p class="price">$100.00</p>
+						<p class="product-name">AENEAN VIVERRA</p>
+						<p class="product-info">Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+						<p class="product-rated">★★★★★</p>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-resize-horizontal product-compare"></i>
+						</div>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-star product-star"></i>
+						</div>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-shopping-cart product-cart"></i>
+						</div>
+					</div>
+					<div class="col-sm-3 product-div">
+	 					<div class="col-sm-12 product-pic">
+							<img src="http://livedemo00.template-help.com/opencart_54980/image/cache/catalog/product-46-270x270.png" alt="">
+						</div>
+						<p class="price">$100.00</p>
+						<p class="product-name">AENEAN VIVERRA</p>
+						<p class="product-info">Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+						<p class="product-rated">★★★★★</p>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-resize-horizontal product-compare"></i>
+						</div>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-star product-star"></i>
+						</div>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-shopping-cart product-cart"></i>
+						</div>
+					</div>
+					<div class="col-sm-3 product-div">
+	 					<div class="col-sm-12 product-pic">
+							<img src="http://livedemo00.template-help.com/opencart_54980/image/cache/catalog/product-46-270x270.png" alt="">
+						</div>
+						<p class="price">$100.00</p>
+						<p class="product-name">AENEAN VIVERRA</p>
+						<p class="product-info">Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+						<p class="product-rated">★★★★★</p>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-resize-horizontal product-compare"></i>
+						</div>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-star product-star"></i>
+						</div>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-shopping-cart product-cart"></i>
+						</div>
+					</div>
+					<div class="col-sm-3 product-div">
+	 					<div class="col-sm-12 product-pic">
+							<img src="http://livedemo00.template-help.com/opencart_54980/image/cache/catalog/product-46-270x270.png" alt="">
+						</div>
+						<p class="price">$100.00</p>
+						<p class="product-name">AENEAN VIVERRA</p>
+						<p class="product-info">Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+						<p class="product-rated">★★★★★</p>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-resize-horizontal product-compare"></i>
+						</div>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-star product-star"></i>
+						</div>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-shopping-cart product-cart"></i>
+						</div>
+					</div>
+					<div class="col-sm-3 product-div">
+	 					<div class="col-sm-12 product-pic">
+							<img src="http://livedemo00.template-help.com/opencart_54980/image/cache/catalog/product-46-270x270.png" alt="">
+						</div>
+						<p class="price">$100.00</p>
+						<p class="product-name">AENEAN VIVERRA</p>
+						<p class="product-info">Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+						<p class="product-rated">★★★★★</p>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-resize-horizontal product-compare"></i>
+						</div>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-star product-star"></i>
+						</div>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-shopping-cart product-cart"></i>
+						</div>
+					</div>
+					<div class="col-sm-3 product-div">
+	 					<div class="col-sm-12 product-pic">
+							<img src="http://livedemo00.template-help.com/opencart_54980/image/cache/catalog/product-46-270x270.png" alt="">
+						</div>
+						<p class="price">$100.00</p>
+						<p class="product-name">AENEAN VIVERRA</p>
+						<p class="product-info">Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+						<p class="product-rated">★★★★★</p>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-resize-horizontal product-compare"></i>
+						</div>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-star product-star"></i>
+						</div>
+						<div class="col-sm-4">
+							<i class="glyphicon glyphicon-shopping-cart product-cart"></i>
+						</div>
+					</div>
+				</div>
+	 			<div class="col-sm-12 last-page">
+					<div class="col-sm-4 last-div">
+						<h3>FOLLOW US ON FACEBOOK</h3>
+						<div class="fb"></div>
+					</div>
+					<div class="col-sm-4 last-div">
+						<div class="col-sm-12">
+							<div class="col-sm-4 col-xs-4 last-icon">
+								<i class="glyphicon glyphicon-road"></i>
+							</div>
+							<div class="col-sm-8 col-xs-8 last-text">
+								<h3>FREE SHIPPING</h3>
+								<p>Donec vitae diam ut purus luctus filisis. Nullectus non eros tristique ultric.</p>
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="col-sm-4 col-xs-4 last-icon">
+								<i class="glyphicon glyphicon-earphone"></i>
+							</div>
+							<div class="col-sm-8 col-xs-8 last-text">
+								<h3>ONLINE SUPPORT</h3>
+								<p>Donec vitae diam ut purus luctus filisis. Nullectus non eros tristique ultric.</p>
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="col-sm-4 col-xs-4 last-icon">
+								<i class="glyphicon glyphicon-qrcode"></i>
+						</div>
+							<div class="col-sm-8 col-xs-8 last-text">
+								<h3>GIFT CARDS</h3>
+								<p>Donec vitae diam ut purus luctus filisis. Nullectus non eros tristique ultric.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 last-div last-link">
+						<h3>USEFUL LINKS</h3>
+						<ul>
+							<li><a href="#">Vestibulum id elementum massa</a></li>
+							<li><a href="#">Curabitur cursus vel eros</a></li>
+							<li><a href="#">Suspendisse dapibus ullamcorper</a></li>
+							<li><a href="#">Eleifend pharetra</a></li>
+							<li><a href="#">Donec ultrices quam nec erat males</a></li>
+							<li><a href="#">Etiam ornare nisi non interdum</a></li>
+							<li><a href="#">Phasellus eget ultrices dolor</a></li>
+							<li><a href="#">Ut viverra urna eu</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-12 footer">
+					<div class="col-sm-2 foot-div">
+						<h3>INFORMATION</h3>
+						<p>About Us</p>
+						<p>Delivery Information</p>
+						<p>Privacy Policy</p>
+						<p>Terms & Conditions</p>
+					</div>
+					<div class="col-sm-2 foot-div">
+						<h3>CUSTOMER SERVICE</h3>
+						<p>Contact Us</p>
+						<p>Returns</p>
+						<p>Site Map</p>
+					</div>
+					<div class="col-sm-2 foot-div">
+						<h3>EXTRAS</h3>
+						<p>Brands</p>
+						<p>Gift Vouchers</p>
+						<p>Affiliates</p>
+						<p>Specials</p>
+					</div>
+					<div class="col-sm-2 foot-div">
+						<h3>MY ACCOUNT</h3>
+						<p>My Account</p>
+						<p>Order History</p>
+						<p>Wish List</p>
+						<p>Newsletter</p>
+					</div>
+					<div class="col-sm-4 foot-div">
+						<h3>CONTACT US</h3>
+						<p>COMPANY INC., 8901 MARMORA ROAD, GLASGOW, D04 89GR</p>
+						<h1>800-2345-6789;</h1>
+						<h1>800-2345-6790</h1>
+						<div class="contact col-sm-1"><i class="glyphicon glyphicon-user"></i></div>
+						<div class="contact col-sm-1"><i class="glyphicon glyphicon-text-height"></i></div>
+						<div class="contact col-sm-1"><i class="glyphicon glyphicon-cloud"></i></div>
+					</div>
+					<div class="col-sm-12">
+						<img class="col-sm-3 foot-logo" src="http://livedemo00.template-help.com/opencart_54980/image/catalog/logo1.png" alt="">
+						<p class="col-sm-5 powered">Powered By OpenCart Visionyx optics © 2015</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+		
+
+
+
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	</body>
+</html>
+
