@@ -1,0 +1,693 @@
+CTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+	.navbar{
+		margin-top:27px;
+		}
+
+	.collapse ul.nav.navbar-nav.navbar-right.navbar-inverse{
+		padding:15px 10px;
+		border-radius:40%;
+	}
+	.navbar form.navbar-form.navbar-right.navbar-default{
+		margin-right: 15px;
+		border-radius:10%;
+	}
+	.navbar form.navbar-form .form-group input.form-control{
+		height:55px;
+		width:100%;
+		padding:23px 70px 23px 34px;
+		font-size:20px;
+		border:none;
+	} 
+	.navbar form.navbar-form button.btn{
+		height:68px;
+		border:none;
+	}
+	.navbar .collapse.navbar-collapse.navbar-ex1-collapse ul.nav.navbar-nav.navbar-left{
+		margin-top:15px;
+	}
+	i.fa-phone{
+		height:10px;
+		width:10px;
+	}
+	.stuck .container ul.list-inline .logotext{
+		float:left;
+		margin-left:5px;
+	}
+	.stuck .container ul.list-inline img{
+		float:left;
+		margin-top: 3px;
+	}
+	.stuck .container ul.list-inline li.phone.navbar-right{
+		margin-right: 10px;
+		margin-top:3px;
+		color:lightgrey;
+	}
+	.stuck .container ul.list-inline li.cart.navbar-right{
+		margin-top:2px;
+	}
+	.menu .container ul.list-inline.btn-lg.col-sm-offset-1{
+		margin-top: 10px;
+		background-color:black;
+		margin-right:9px;
+		margin-left:10px;
+		padding:25px;
+		border-right:.5px solid white;
+	}
+	.menu .container ul.list-inline.btn-lg.col-sm-offset-1 li a{
+		padding:40px;
+		color:white;
+	}
+	.menu .container ul.list-inline.btn-lg.col-sm-offset-1 a.dropdown-toggle{
+		color:white;
+	}
+	.menu .container ul.list-inline.btn-lg.col-sm-offset-1 ul.dropdown-menu{
+		margin-left:321px;
+		margin-top:-10px;
+		background-color:black;
+		color:white;
+	}
+	.menu .container ul.list-inline.btn-lg.col-sm-offset-1 ul.dropdown-menu a{
+		margin:-26px;
+	}
+	.slider{
+		margin-top:20px;
+		margin-bottom:20px;
+	}
+	.search{
+		background-color:black;
+	}
+	.search .container-fluid .raw .list-inline{
+		margin-top:20px;
+		margin-left:39px;
+		padding-top:50px;
+		margin-bottom:-28px;
+	}
+	.search .container-fluid .raw .list-inline li.b,li.c{
+		margin-left:30px;
+	}
+	.search .container-fluid .raw .list-inline li.a img,li.b img,li.c img{
+		border-radius:15px;
+	}
+	.search .container-fluid .list-inline .a .txt,.b .txt,.c .txt{
+		background-color:green;
+		position:relative;
+		left:0px;
+		bottom:89px;
+		border-radius:15px;
+		color:white;
+		padding:-10px;
+		margin:0;
+	}
+	.search .container-fluid .list-inline .a .txt p,.b .txt p,.c .txt p{
+		margin:0;
+		font-size:28px;
+		color:black;
+		position:relative;
+		left:61px;
+		top:41px;
+	}
+	.search .container-fluid .list-inline .a .txt h3,.b .txt h3,.c .txt h3{
+		margin:0;
+		font-size:44px;
+		position:relative;
+		left:59px;
+		top:34px;
+	}
+	.search .container-fluid .list-inline .a .txt i,.b .txt i,.c .txt i{
+		position:relative;
+		left:268px;
+		top:-67px;
+		font-size:80px;
+	}
+	.box .container .item{
+		width: 235px;
+		height: 530px;
+		margin: 10px;
+		float: left;
+		background-color:#fff;
+		padding:15px;
+		box-sizing: border-box;	
+		border-radius:6px;
+		transition: .5s;
+	}
+	.box .item:hover{
+		background-color:lightgrey;
+	}
+	.box:after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 0;
+		clear: both;
+	}
+	.item .pic img {
+		width: 100%;
+	}
+	.item:nth-child(4n+1) {
+		margin-left: 0;
+	}
+	.item:nth-child(4n) {
+		margin-right: 0;
+	}
+	.item .price{
+		color:red;
+		font-weight:500;
+		font-size:30px;
+		text-align:left;
+	}
+	.item a{
+		text-decoration:none;
+	}
+	.section2 ul.list-inline {
+		margin-left:10px;
+		margin-top: 20px;
+	}
+	.section2 ul.list-inline li p:hover{
+		background-color:lightgrey;
+	}
+	.section2 ul.list-inline li p{
+		margin-left:90px;
+		font-size:30px;
+		background-color:whitesmoke;
+		border-radius:15px;
+		padding:10px;
+		padding-left:70px;
+	}
+	.section2 ul.list-inline li i{
+		position:relative;
+		left:98px;
+		top:60px;
+		font-size:50px;
+	}
+	.footer{
+		background-color:black;
+	}
+	.footer .container-fluid ul.list-unstyled.list-inline li {
+		padding-left:67px;
+	}
+	.footer .container-fluid ul.list-unstyled.list-inline li h4 a{
+		color:lightskyblue;
+		margin-bottom:10px;
+	}
+	.footer .container-fluid ul.list-unstyled.list-inline li p{
+		color:whitesmoke;
+	}
+	.footer .container-fluid ul.list-unstyled.list-inline li p a{
+		color:whitesmoke;
+	}
+	.footer .container-fluid .logo img{
+		float:left;
+		border-radius:30px;
+		margin-top:10px;
+	}
+	.footer .container-fluid .logo .logotext{
+		float:left;
+		margin-left:10px;
+		color:whitesmoke;
+	}
+	</style>
+	</head>
+	<body>
+		<div class="col-xs-12 col-sm-12">
+			<nav class="navbar" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+						<ul class="nav navbar-nav navbar-left">
+							<li class="active"><a href="#">home</a></li>
+							<li><a href="#">wish list</a></li>
+							<li><a href="#">my account</a></li>
+							<li><a href="#">shopping cart</a></li>
+							<li><a href="#">checkout</a></li>
+						</ul>
+					<ul class="nav navbar-nav navbar-right navbar-inverse ">
+						<li><a href="#">$</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-usd"></i><b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">EURO</a></li>
+								<li><a href="#">NTD</a></li>
+								<li><a href="#">RMD</a></li>
+								<li><a href="#">Dollar</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">EN<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">English</a></li>
+								<li><a href="#">Deutsch</a></li>
+								<li><a href="#">繁體中文</a></li>
+								<li><a href="#">簡体中文</a></li>
+							</ul>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-right navbar-default" role="search">
+						<div class="form-group ">
+							<input type="text" class="form-control navbar-default" placeholder="">
+						</div>
+						<button type="submit" class="btn btn-default navbar-default"><i class="glyphicon glyphicon-search"></i></button>
+					</form>
+				</div><!-- /.navbar-collapse -->
+			</nav>
+			<div class="stuck">
+				<div class="container">
+					<ul class="list-inline">
+						<img src="pictures/visioneye.JPG" alt="">
+						<div class="logotext">
+							<h1>VISIONXY</h1>
+							<p>contact lense store</p>
+						</div>
+						<li class="cart navbar-right">
+						 	<h2><button type:"button" data-toggle:"dropdown" data-toggle-text:"loading" class:"dropdown-toggle">
+							<i class="glyphicon glyphicon-home"></i>
+							<strong>cart</strong>
+							<span id="cart-total" class="cart-total ">:<small>"item:0-$0.00"</small></span>
+							</button></h2>
+						</li>
+						<li class="phone navbar-right"><h2><i class="glyphicon glyphicon-phone"></i>123-456-789</li></h2>
+					</ul>
+				</div>
+			</div>
+			<div class="menu">
+				<div class="container">
+					<ul class="list-inline btn-lg col-sm-offset-1">
+							<li>
+								<a href="#">colorleness</a>
+							</li>
+							<li class="dropdown"></li><a href="#" class="dropdown-toggle" data-toggle="dropdown">monthlies<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">a</a></li>
+								<li><a href="#">b</a></li>
+								<li><a href="#">c</a></li>
+								<li><a href="#">d</a></li>
+							</ul>
+							<li><a href="#">dailes</a></li>
+							<li><a href="#">extended wear</a></li>
+							<li><a href="#">colour and tinted</a></li>
+							<li><a href="#">accessories</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="slider">
+				<div id="carousel-id" class="carousel slide" data-ride="carousel">
+				    <ol class="carousel-indicators">
+				        <li data-target="#carousel-id" data-slide-to="0" class=""></li>
+				        <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+				        <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+				    </ol>
+				    <div class="carousel-inner">
+				        <div class="item">
+				            <img src="pictures/contact3.jpg" height="400" width="600">
+				            <div class="container">
+				                <div class="carousel-caption col-sm-offset-4">
+				                    <h1>Example headline.</h1>
+				                    <p>Note: If you're viewing this page via a URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+				                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="item">
+				            <img src="pictures/contact2.jpg" height="400" width="600">
+				            <div class="container">
+				                <div class="carousel-caption col-sm-offset-4">
+				                    <h1>Another example headline.</h1>
+				                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="item active">
+				            <img src="pictures/contact1.jpg" height="400" width="600">
+				            <div class="container">
+				                <div class="carousel-caption col-sm-offset-4">
+				                    <h1>One more for good measure.</h1>
+				                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+				                </div>
+				            </div>
+				        </div>
+
+				    </div>
+				    <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+				    <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+				</div>
+			</div>
+			<div class="search">
+				<div class="container-fluid">
+					<div class="raw">
+						<ul class="list-inline">
+							<li class=a>
+								<a href="#">
+									<img src="pictures/contacteye.jpg"  height="290" width="370" alt="">
+								</a>
+								<div class="txt">
+									<p>colour </p>
+									<h3>and tinted</h3>
+									<i class="glyphicon glyphicon-search"></i>
+								</div>
+							</li>
+							<li class=b>
+								<a href="#">
+									<img src="pictures/contact-wash.jpg" height="290" width="370" alt="">
+								</a>
+								<div class="txt">
+									<p>lens </p>
+									<h3>and care</h3>
+									<i class="glyphicon glyphicon-search"></i>
+								</div>
+							</li>
+							<li class=c>
+								<a href="#">
+									<img src="pictures/contact-lenses.jpg" height="290" width="370" alt="">
+								</a>
+								<article class="txt">
+									<section class="3">
+									<p>contact lens </p>
+									<h3>Accessories</h3>
+									</section>
+									<section class="3.1">
+									<i class="glyphicon glyphicon-search"></i>
+									</section>
+								</article>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="box">
+				<div class="container">
+				<div class="row">
+				<div class="box-heading">
+					<h1>Items</h1>
+				</div>
+					<div class="item">
+						<div class="a">
+							<div class="pic"><a href="#"><img src="pictures/item2.png" height="270" width="270" alt=""></a></div>
+								<div class="text">
+									<div class="price">$60.00</div>
+									<h3>CONSECTETUR ADIPISCING</h3>
+									<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="a">
+							<div class="pic"><a href="#"><img src="pictures/item2.png" height="270" width="270" alt=""></a></div>
+								<div class="text">
+									<div class="price">$60.00</div>
+									<h3>CONSECTETUR ADIPISCING</h3>
+									<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								</div>
+								<div class="cart-button btn-lg">
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-share-alt"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-shopping-cart"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-certificate"></i>
+									</button>
+								</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="a">
+							<div class="pic"><a href="#"><img src="pictures/item.png" height="270" width="270" alt=""></a></div>
+								<div class="text">
+									<div class="price">$60.00</div>
+									<h3>CONSECTETUR ADIPISCING</h3>
+									<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								</div>
+								<div class="cart-button btn-lg">
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-share-alt"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-shopping-cart"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-certificate"></i>
+									</button>
+								</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="a">
+							<div class="pic"><a href="#"><img src="pictures/item2.png" height="270" width="270" alt=""></a></div>
+								<div class="text">
+									<div class="price">$60.00</div>
+									<h3>CONSECTETUR ADIPISCING</h3>
+									<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								</div>
+								<div class="cart-button btn-lg">
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-share-alt"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-shopping-cart"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-certificate"></i>
+									</button>
+								</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="a">
+							<div class="pic"><a href="#"><img src="pictures/item.png" height="270" width="270" alt=""></a></div>
+								<div class="text">
+									<div class="price">$60.00</div>
+									<h3>CONSECTETUR ADIPISCING</h3>
+									<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								</div>
+								<div class="cart-button btn-lg">
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-share-alt"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-shopping-cart"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-certificate"></i>
+									</button>
+								</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="a">
+							<div class="pic"><a href="#"><img src="pictures/item.png" height="270" width="270" alt=""></a></div>
+								<div class="text">
+									<div class="price">$60.00</div>
+									<h3>CONSECTETUR ADIPISCING</h3>
+									<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								</div>
+								<div class="cart-button btn-lg">
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-share-alt"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-shopping-cart"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-certificate"></i>
+									</button>
+								</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="a">
+							<div class="pic"><a href="#"><img src="pictures/item.png" height="270" width="270" alt=""></a></div>
+								<div class="text">
+									<div class="price">$60.00</div>
+									<h3>CONSECTETUR ADIPISCING</h3>
+									<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								</div>
+								<div class="cart-button btn-lg">
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-share-alt"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-shopping-cart"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-certificate"></i>
+									</button>
+								</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="a">
+							<div class="pic"><a href="#"><img src="pictures/item.png" height="270" width="270" alt=""></a></div>
+								<div class="text">
+									<div class="price">$60.00</div>
+									<h3>CONSECTETUR ADIPISCING</h3>
+									<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								</div>
+								<div class="cart-button btn-lg">
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-share-alt"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-shopping-cart"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-certificate"></i>
+									</button>
+								</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="a">
+							<div class="pic"><a href="#"><img src="pictures/item.png" height="270" width="270" alt=""></a></div>
+								<div class="text">
+									<div class="price">$60.00</div>
+									<h3>CONSECTETUR ADIPISCING</h3>
+									<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								</div>
+								<div class="cart-button btn-lg">
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-share-alt"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-shopping-cart"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-certificate"></i>
+									</button>
+								</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="a">
+							<div class="pic"><a href="#"><img src="pictures/item.png" height="270" width="270" alt=""></a></div>
+								<div class="text">
+									<div class="price">$60.00</div>
+									<h3>CONSECTETUR ADIPISCING</h3>
+									<p>Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								</div>
+								<div class="cart-button btn-lg">
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-share-alt"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-shopping-cart"></i>
+									</button>
+									<button class="product-btn" type="button" data-toggle="toolip">
+										<i class="glyphicon glyphicon-certificate"></i>
+									</button>
+								</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="section2">
+			<div class="container-fluid">
+			<div class="row">
+				<ul class="list-inline">
+					<li>
+						<i class="glyphicon glyphicon-hand-up"></i>
+						<p>follow us in FACEBOOK</p>
+						<a href="#"></a>
+						
+					</li>
+					<li>
+						<i class="glyphicon glyphicon-phone"></i>
+						<p>free shipping</p>
+						<a href="#"></a>
+						
+					</li>
+					<li>
+						<i class="glyphicon glyphicon-log-out"></i>
+						<p>useful inlink</p>
+						<a href="#"></a>
+
+					</li>
+				</ul>
+			</div>
+			</div>
+			</div>
+				<div class="footer">
+					<div class="container-fluid">
+						<ul class="list-unstyled list-inline">
+							<li>
+									<h4><a href="#">INFORMATION</a></h4>
+									<p><a href="#">About Us</a></p>
+									<p><a href="#">Delivery Information</a></p>
+									<p><a href="#">Privacy Policy</a></p>
+									<p><a href="#">Terms & Conditions</a></p>
+							</li>
+							<li>
+								
+									<h4><a href="#">CUSTOMER SERVICE</a></h4>
+									<p><a href="#">Contact Us</a></p>
+									<p><a href="#">Returns</a></p>
+									<p><a href="#">Site Map</a></p>
+									<p>---------- </p>
+								
+							</li>
+							<li>
+								
+									<h4><a href="#">EXTRAS</a></h4>
+									<p><a href="#">a</a></p>
+									<p><a href="#">b</a></p>
+									<p><a href="#">c</a></p>
+									<p><a href="#">d</a></p>
+							
+							</li>
+							<li>
+								
+									<h4><a href="#">MY ACCOUNT</a></h4>
+									<p><a href="#">d</a></p>
+									<p><a href="#">f</a></p>
+									<p><a href="#">g</a></p>
+									<p><a href="#">h</a></p>
+						
+							</li>
+							<li>
+								
+									<h4><a href="#">CONTACT US</a></h4>
+									<p>COMPANY INC., 8901 MARMORA ROAD, GLASGOW, D04 89GR</p>
+									<h4><a href="#">800-2345-6789;</a></h4>
+									<h4><a href="#">800-2345-6790</a></h4>
+						
+							</li>
+						</ul>
+						<div class="logo">
+						<img src="pictures/visioneye.JPG" alt="">
+						<div class="logotext">
+							<h1>VISIONXY</h1>
+							<p>contact lense store</p>
+						</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+		</div>
+
+
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	</body>
+</html>
+
