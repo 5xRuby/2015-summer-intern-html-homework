@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+		<!-- Bootstrap CSS -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Font Awesome -->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" >
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<!--========== 最上面那一大塊 ==========-->
+		<div class="header col-sm-12">
+			<!--========== breadcrumb /search/ $.語言選單 ==========-->
+			<ol class="col-sm-5 breadcrumb">
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#">WISH LIST (0)</a>
+				</li>
+				<li>
+					<a href="#">MY ACCOUNT</a>
+				</li>
+				<li>
+					<a href="#">SHOPPING CART</a>
+				</li>
+				<li>
+					<a href="#">CHECKOUT</a>
+				</li>
+			</ol>
+			<!--========== search ==========-->
+			<div class="col-sm-3 col-sm-offset-2 header_search">
+				<input type="text" name="search" placeholder="Search">
+				<button type="button" class="btn_search glyphicon glyphicon-search btn-lg"></button>
+			</div>
+			<!--========== $.語言選單 ==========-->
+			<div class="header_dropdown">
+				<!-- $ 選單 -->
+				<div class="currency">
+					<div class="dropdown">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> $ <span class="caret"></span>
+  						</button>
+					<!-- <span class="dropdown-toggle" data-toggle="dropdown">$ -->
+						<!-- <span class="hidden-xs hidden-sm hidden-md hidden">Currency</span> </span> -->
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    <li><a href="#">Euro</a></li>
+						    <li><a href="#">Pound Sterling</a></li>
+						    <li><a href="#">US Dollar</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- 語言選單 -->
+				<div class="language">
+					<div class="dropdown">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> En <span class="caret"></span>
+  						</button>
+					<!-- <span class="dropdown-toggle" data-toggle="dropdown">$ -->
+						<!-- <span class="hidden-xs hidden-sm hidden-md hidden">Currency</span> </span> -->
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    <li><a href="#">English</a></li>
+						    <li><a href="#">繁體中文</a></li>
+						    <li><a href="#">日本語</a></li>
+						</ul>
+					</div>		
+				</div>
+			</div>
+			<div class="clearfix"></div> 
+			<!--========== logo/ phone/ cart ==========-->
+			<div class="header_logo">
+				<div class="col-sm-3 logo"> 
+					<img src="img/logo.png" height="90" width="344" alt="">
+				</div>
+				<div class="col-sm-4 col-sm-offset-3 phone">
+					<a href="#"><i class="fa fa-phone fa-3x"></i>1-800-234-5677</a>
+				</div> 
+				<div class="header_logo_right">
+					<div class="cart">
+						<a class="fa fa-shopping-cart fa-2x" href="#"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--========== nav ==========-->	
+		<div class="header_bar col-sm-12">
+				<!-- 選單 -->
+				<div class="row">
+				<nav>
+					<ul class="main">
+						<li class="col-sm-2"><a href="#">COLOR LENSES</a>
+							<ul class="sub">
+								<li><a href="#">我是子選單</a></li>
+								<li><a href="#">我是子選單</a></li>
+								<li><a href="#">我是子選單</a></li>
+							</ul>
+						</li>
+						<li class="col-sm-2"><a href="#">MONTHLIES</a></li>
+						<li class="col-sm-2"><a href="#">DAILIES</a></li>
+						<li class="col-sm-2"><a href="#">EXTENDED WEAR</a></li>
+						<li class="col-sm-2"><a href="#">COLORED & TINTED</a></li>
+						<li class="col-sm-2"><a href="#">ACCESSORIES</a></li>
+					</ul>
+				<div class="clearfix"></div>
+				</nav>
+				</div>
+		</div>
+		<!--========== container ==========-->
+		<div class="container col-sm-12">
+			<!--========== slider ==========-->
+			<div class="slider">
+				<div class="row">
+					<div id="carousel-id" class="carousel slide" data-ride="carousel">
+					    <ol class="carousel-indicators">
+					    	<!-- 小圓點 -->
+					        <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
+					        <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+					        <li data-target="#carousel-id" data-slide-to="2" class=""></li>
+					    </ol>
+					    <div class="carousel-inner">
+					        <div class="item active">
+					            <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="img/slide1.jpg">
+					            <div class="container">
+					                <div class="carousel-caption">
+					                    <h1>OFFERING THE HIGHEST</h1>
+					                    <p>QUALITY CONTACT LENSES</p>
+					                </div>
+					            </div>
+					        </div>
+					        <div class="item">
+					            <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide" src="img/slide1.jpg">
+					            <div class="container">
+					                <div class="carousel-caption">
+					                    <h1>A WIDE RANGE OF SOFT</h1>
+					                    <p>AND COMFORTABLE EYEWEAR PRODUCTS</p>
+					                </div>
+					            </div>
+					        </div>
+					        <div class="item">
+					            <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="img/slide1.jpg">
+					            <div class="container">
+					                <div class="carousel-caption">
+					                    <h1>100% SATISFACTION.</h1>
+					                    <p>FREE EXCHANGES. FREE RETURNS</p>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					    <!-- 上一頁 -->
+					    <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+					    <!-- 下一頁 -->
+					    <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+					</div>
+				</div>
+			</div>
+			<!--========== 三個類別search ==========-->
+			<div class="col3">
+				<div class="col-sm-3 col3_item" style="background-image: url(img/banner-1-370x286.jpg);">
+					<!-- <img src="img/banner-1-370x286.jpg" height="286" width="370" alt=""> -->
+					<a class="col3_search" style="background-color: #3498DB;" href="#">
+						<p class="text1">COLORED</p>
+						<p class="text2">& TINTED</p>
+						<i class="fa fa-search fa-4x"></i>
+					</a>
+				</div>
+				<div class="col-sm-3 col3_item" style="background-image: url(img/banner-2-370x286.jpg);">
+					<!-- <img src="img/banner-1-370x286.jpg" height="286" width="370" alt=""> -->
+					<a class="col3_search" style="background-color: #96CA2D;" href="#">
+						<p class="text1">LENS &</p>
+						<p class="text2">EYES CARE</p>
+						<i class="fa fa-search fa-4x"></i>
+					</a>
+				</div>
+				<div class="col-sm-3 col3_item" style="background-image: url(img/banner-3-370x286.jpg);">
+					<!-- <img src="img/banner-1-370x286.jpg" height="286" width="370" alt=""> -->
+					<a class="col3_search" style="background-color: #E74C3C;" href="#">
+						<p class="text1">CONTACT LENS</p>
+						<p class="text2">ACCESSORIES</p>
+						<i class="fa fa-search fa-4x"></i>
+					</a>
+				</div>
+
+			<!--========== 眼科推薦 ==========-->
+			<div class="col-sm-12 recommand">
+				<p class="text3">RECOMMENDED BY OPTOMETRIST</p>
+				<p class="text4">MES CUML DIA SED INENIAS INGERTO LOT ALIIQT DOLORE IPSUM COMMETE.</p>
+				<a class="moreinfo" href="#">MORE INFO</a>
+				<a class="moreinfo2 fa fa-file-text-o fa-2x" href="#"></a>
+			</div>
+			<!--========== 兩欄圖 ==========-->
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-6 col2" style="background-color: #3498DB;">
+						<p class="fa fa-phone-square fa-5x"></p>
+						<p class="text5">ORDER ONLINE</p>
+						<p class="text6">HOURS: 8AM -11PM</p>
+					</div>
+					<div class="col-sm-6 col2" style="background-color: #3B3F46;">
+						<p class="fa fa-truck fa-5x"></p>
+						<p class="text5">FREE DELIVERY</p>
+						<p class="text6">ON ORDERS OVER $99</p>
+					</div>
+				</div>
+			</div>
+			<!--========== 商品資訊 ==========-->
+			<div class="col-sm-12 features">
+				<p class="col-sm-12">FEATURED</p>
+				<div class="row">
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+						<div class="thumbnail">
+							<a class="" href="#"></a>
+							<a class="product" href="#"><img src="img/product-46-270x270.png" height="270" width="270" alt=""></a>
+							<div class="caption">
+								<h3>$100.00</h3>
+								<a href="#">AENEAN VIVERRA</a>
+								<p class="product_text">Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<div class="row">
+									<a href="#" class="btn_product"><i class="fa fa-star fa-2x"></i></a>
+									<a href="#" class="btn_product"><i class="fa fa-shopping-cart fa-2x"></i></a>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+						<div class="thumbnail">
+							<a class="product" href="#"><img src="img/product-52-270x270.png" height="270" width="270" alt=""></a>
+							<div class="caption">
+								<h3>$150.00</h3>
+								<a href="#">ALIQUAM DOLOR TELLUS</a>
+								<p class="product_text">Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<div class="row">
+									<a href="#" class="btn_product"><i class="fa fa-star fa-2x"></i></a>
+									<a href="#" class="btn_product"><i class="fa fa-shopping-cart fa-2x"></i></a>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+						<div class="thumbnail">
+							<a class="product" href="#"><img src="img/product-10-270x270.png" height="270" width="270" alt=""></a>
+							<div class="caption">
+								<h3>$80.00</h3>
+								<a href="#">ALIQUAM EGET</a>
+								<p class="product_text">Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<div class="row">
+									<a href="#" class="btn_product"><i class="fa fa-star fa-2x"></i></a>
+									<a href="#" class="btn_product"><i class="fa fa-shopping-cart fa-2x"></i></a>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+						<div class="thumbnail">
+							<a class="product" href="#"><img src="img/product-13-270x270.png" height="270" width="270" alt=""></a>
+							<div class="caption">
+								<h3>$80.00</h3>
+								<a href="#">DOLOR SIT AMET</a>
+								<p class="product_text">Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<div class="row">
+									<a href="#" class="btn_product"><i class="fa fa-star fa-2x"></i></a>
+									<a href="#" class="btn_product"><i class="fa fa-shopping-cart fa-2x"></i></a>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div class="row">
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+						<div class="thumbnail">
+							<a class="product" href="#"><img src="img/product-31-270x270.png" height="270" width="270" alt=""></a>
+							<div class="caption">
+								<h3>$100.00</h3>
+								<a href="#">AENEAN VIVERRA</a>
+								<p class="product_text">Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<div class="row">
+									<a href="#" class="btn_product"><i class="fa fa-star fa-2x"></i></a>
+									<a href="#" class="btn_product"><i class="fa fa-shopping-cart fa-2x"></i></a>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+						<div class="thumbnail">
+							<a class="product" href="#"><img src="img/product-10-270x270.png" height="270" width="270" alt=""></a>
+							<div class="caption">
+								<h3>$150.00</h3>
+								<a href="#">ALIQUAM DOLOR TELLUS</a>
+								<p class="product_text">Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<div class="row">
+									<a href="#" class="btn_product"><i class="fa fa-star fa-2x"></i></a>
+									<a href="#" class="btn_product"><i class="fa fa-shopping-cart fa-2x"></i></a>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+						<div class="thumbnail">
+							<a class="product" href="#"><img src="img/product-16-270x270.png" height="270" width="270" alt=""></a>
+							<div class="caption">
+								<h3>$80.00</h3>
+								<a href="#">ALIQUAM EGET</a>
+								<p class="product_text">Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<div class="row">
+									<a href="#" class="btn_product"><i class="fa fa-star fa-2x"></i></a>
+									<a href="#" class="btn_product"><i class="fa fa-shopping-cart fa-2x"></i></a>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+						<div class="thumbnail">
+							<a class="product" href="#"><img src="img/product-22-270x270.png" height="270" width="270" alt=""></a>
+							<div class="caption">
+								<h3>$80.00</h3>
+								<a href="#">DOLOR SIT AMET</a>
+								<p class="product_text">Our company supplies all well-known brands of lenses and you can easily order any ty..</p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<p class="fa fa-star"></p>
+								<div class="row">
+									<a href="#" class="btn_product"><i class="fa fa-star fa-2x"></i></a>
+									<a href="#" class="btn_product"><i class="fa fa-shopping-cart fa-2x"></i></a>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>			
+				</div>
+			</div>
+			<!--========== 三欄 ==========-->
+			<div class="col-sm-12 content">
+				<div class="col-sm-3 content_item">
+					<p class="text_content">FOLLOW US ON FACEBOOK</p>
+					<img src="img/fb.png" alt="">
+				</div>
+				<div class="col-sm-3 content_item">
+					<div class="service row">
+						<div class="circle"></div>
+						<p class="text_content">FREE SHIPPING</p>
+						<p class="text_cotent2">Donec vitae diam ut purus luctus filisis. Nullectus non eros tristique ultric.</p>
+					</div>
+				</div>
+				<div class="col-sm-3 content_item">
+					<p class="text_content">USEFUL LINKS</p>
+					<ul>
+						<li><a href="#">Vestibulum id elementum massa</a></li>
+						<li><a href="#">Curabitur cursus vel eros</a></li>
+						<li><a href="#">Suspendisse dapibus ullamcorper</a></li>
+						<li><a href="#">Eleifend pharetra</a></li>
+						<li><a href="#">Donec ultrices quam nec erat males</a></li>
+						<li><a href="#">Etiam ornare nisi non interdum</a></li>
+						<li><a href="#">Phasellus eget ultrices dolor</a></li>
+						<li><a href="#">Ut viverra urna eu</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>  <!-- End container -->
+		
+		<!--========== FOOTER ==========-->
+		<!--========== FOOTER logo ==========-->
+		
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	</body>
+</html>
